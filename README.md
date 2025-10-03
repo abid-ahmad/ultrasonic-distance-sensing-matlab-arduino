@@ -1,5 +1,6 @@
 # Ultrasonic Distance Sensing System (MATLAB + Arduino)
 
+> 🚧 **Actively updating:** This repository is under active development; additional plots, calibration results, and a demo video will be added as they’re ready.
 > Live distance–time acquisition, calibration, error analysis, and velocity estimation using **HC-SR04**, **Arduino**, and **MATLAB App Designer**.
 
 [![MATLAB](https://img.shields.io/badge/MATLAB-R2023b%2B-orange.svg)](#)

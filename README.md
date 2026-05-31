@@ -24,16 +24,21 @@ The project was developed for **Numerical Methods (ECE3040) Project #2** at Wayn
 * [How the System Works](#how-the-system-works)
 * [MATLAB GUI](#matlab-gui)
 * [Sample Results](#sample-results)
+* [Method Comparison](#method-comparison)
+* [Results Summary](#results-summary)
+* [Limitations](#limitations)
+* [Future Improvements](#future-improvements)
 * [Repository Structure](#repository-structure)
 * [How to Run](#how-to-run)
 * [Team Members](#team-members)
+* [Course Information](#course-information)
 * [License](#license)
 
 ---
 
 ## Project Overview
 
-Real-time systems often experience delay between measurement, computation, and mechanical response. In this project, an ultrasonic sensor measures the distance of a moving object that represents a simulated heartbeat or oscillating surface. The MATLAB GUI records this distance-time data and applies numerical methods to estimate the motion frequency and predict the object’s future position.
+Real-time tracking systems often experience delay between measurement, computation, and mechanical response. In this project, an ultrasonic sensor measures the distance of a moving object that represents a simulated heartbeat or oscillating surface. The MATLAB GUI records distance-time data and applies numerical methods to estimate motion frequency and predict the object’s future position.
 
 The predicted position is then converted into a servo angle so the servo motor can attempt to follow the moving object in real time.
 
@@ -212,27 +217,9 @@ Lagrange interpolation creates a polynomial that passes through selected recent 
 
 ## MATLAB GUI
 
-The MATLAB GUI allows the user to:
+The MATLAB GUI allows the user to initialize the Arduino, reset the system, start and stop monitoring, plot data, clear graphs, select materials, enter true-distance values, perform error analysis, select numerical methods, and compute the oscillation frequency.
 
-* initialize the Arduino
-* reset the system
-* start and stop monitoring
-* plot graphs
-* clear graphs
-* select materials
-* enter true distance values
-* measure sensor points
-* perform error analysis
-* select the order of the prediction model
-* run least-squares prediction
-* run Lagrange interpolation prediction
-* compute heartbeat or oscillation frequency
-
-Add GUI screenshot here:
-
-```markdown
 ![MATLAB GUI](docs/img/gui_overview.png)
-```
 
 ---
 
@@ -242,33 +229,33 @@ The system successfully measured and plotted live distance data from the ultraso
 
 ### Frequency Estimation
 
-A sample frequency result from the GUI was:
+The GUI computed a sample oscillation frequency of **0.56 Hz** using selected waveform points and zero-crossing calculation.
 
-```text
-Frequency = 0.56 Hz
-```
+![Frequency Result](docs/img/frequency_result.png)
 
-This value was computed by selecting two points approximately one period apart on the waveform and locating the zero crossing.
+---
 
 ### Least-Squares Prediction
 
 Least-squares prediction produced smoother results and worked better when the ultrasonic sensor data contained noise.
 
-Add least-squares result plot here:
-
-```markdown
 ![Least Squares Result](docs/img/least_squares_result.png)
-```
+
+---
 
 ### Lagrange Prediction
 
 Lagrange interpolation followed short-term motion more closely, but it was more sensitive to noisy measurements.
 
-Add Lagrange result plot here:
-
-```markdown
 ![Lagrange Result](docs/img/lagrange_result.png)
-```
+
+---
+
+### Hardware Setup
+
+The hardware setup includes the Arduino Uno, HC-SR04 ultrasonic sensor, servo motor, LED indicator, breadboard, and jumper wires.
+
+![Hardware Setup](docs/img/hardware_setup.png)
 
 ---
 
@@ -331,14 +318,11 @@ Heart-Rate-Prediction-GUI/
 │
 ├── docs/
 │   └── img/
+│       ├── frequency_result.png
 │       ├── gui_overview.png
 │       ├── hardware_setup.png
-│       ├── least_squares_result.png
-│       └── lagrange_result.png
-│
-├── results/
-│   ├── least_squares_result.png
-│   └── lagrange_result.png
+│       ├── lagrange_result.png
+│       └── least_squares_result.png
 │
 ├── README.md
 └── LICENSE

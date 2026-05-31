@@ -4,12 +4,20 @@
 
 This project is a real-time motion tracking and prediction system built with **MATLAB App Designer**, **Arduino Uno**, an **HC-SR04 ultrasonic sensor**, and a **servo motor**. The system simulates heartbeat-like motion by measuring the distance of a moving surface, estimating its frequency, predicting its future position, and controlling a servo motor to follow the motion.
 
-The project was developed for **Numerical Methods (ECE3040) Project #2** at Wayne State University.
+The project was developed for **Numerical Methods (ECE3040) Project #1* at Wayne State University.
 
 ![MATLAB](https://img.shields.io/badge/MATLAB-App%20Designer-orange)
 ![Arduino](https://img.shields.io/badge/Arduino-Uno-blue)
 ![Sensor](https://img.shields.io/badge/Sensor-HC--SR04-green)
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+
+---
+
+## Demo Video
+
+Watch the project demonstration here:
+
+[View Demo on YouTube](https://www.youtube.com/watch?v=RMuPWADoMFA)
 
 ---
 
@@ -24,6 +32,7 @@ The project was developed for **Numerical Methods (ECE3040) Project #2** at Wayn
 * [How the System Works](#how-the-system-works)
 * [MATLAB GUI](#matlab-gui)
 * [Sample Results](#sample-results)
+* [Project Files](#project-files)
 * [Method Comparison](#method-comparison)
 * [Results Summary](#results-summary)
 * [Limitations](#limitations)
@@ -32,7 +41,6 @@ The project was developed for **Numerical Methods (ECE3040) Project #2** at Wayn
 * [How to Run](#how-to-run)
 * [Team Members](#team-members)
 * [Course Information](#course-information)
-* [License](#license)
 
 ---
 
@@ -259,6 +267,20 @@ The hardware setup includes the Arduino Uno, HC-SR04 ultrasonic sensor, servo mo
 
 ---
 
+## Project Files
+
+The main project files are linked below for easier access:
+
+| File                                                                     | Description                                                   |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------- |
+| [HeartRatePredictionGUI.mlapp](app/HeartRatePredictionGUI.mlapp)         | MATLAB App Designer GUI file                                  |
+| [DistanceSensor.m](src/DistanceSensor.m)                                 | MATLAB class/script for sensor setup and distance measurement |
+| [heart_rate_prediction_gui_code.m](src/heart_rate_prediction_gui_code.m) | Exported MATLAB GUI code                                      |
+| [Project Report](report/ECE3040_Project_Report.pdf)                      | Final project report                                          |
+| [Demo Video](https://www.youtube.com/watch?v=RMuPWADoMFA)                | YouTube demonstration video                                   |
+
+---
+
 ## Method Comparison
 
 | Method                   | Strength                                       | Weakness                            | Best Use                          |
@@ -297,7 +319,6 @@ The prediction window of **100 milliseconds** worked better than longer predicti
 * Improve servo calibration for smoother motion tracking.
 * Add more detailed error metrics for each numerical method.
 * Save experimental data automatically to CSV files.
-* Add a live demo video and additional result plots.
 * Improve GUI layout and labeling.
 
 ---
@@ -311,10 +332,8 @@ Heart-Rate-Prediction-GUI/
 │   └── HeartRatePredictionGUI.mlapp
 │
 ├── src/
-│   ├── least_squares.m
-│   ├── lagrange.m
-│   ├── frequency_estimation.m
-│   └── error_analysis.m
+│   ├── DistanceSensor.m
+│   └── heart_rate_prediction_gui_code.m
 │
 ├── docs/
 │   └── img/
@@ -324,8 +343,10 @@ Heart-Rate-Prediction-GUI/
 │       ├── lagrange_result.png
 │       └── least_squares_result.png
 │
-├── README.md
-└── LICENSE
+├── report/
+│   └── ECE3040_Project_Report.pdf
+│
+└── README.md
 ```
 
 ---
@@ -370,13 +391,7 @@ All team members contributed equally to the completion of this project.
 
 **Course:** Numerical Methods
 **Course Code:** ECE3040
-**Project:** Project #2
+**Project:** Project #1
 **Institution:** Wayne State University
 **Department:** Electrical and Computer Engineering
 **Instructor:** Abhilash Pandya
-
----
-
-## License
-
-This project is licensed under the MIT License.

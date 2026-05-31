@@ -4,7 +4,7 @@
 
 This project is a real-time motion tracking and prediction system built with **MATLAB App Designer**, **Arduino Uno**, an **HC-SR04 ultrasonic sensor**, and a **servo motor**. The system simulates heartbeat-like motion by measuring the distance of a moving surface, estimating its frequency, predicting its future position, and controlling a servo motor to follow the motion.
 
-The project was developed for **Numerical Methods (ECE3040) Project #1** at Wayne State University.
+The project was developed for **Numerical Methods (ECE3040) Project #2** at Wayne State University.
 
 ![MATLAB](https://img.shields.io/badge/MATLAB-App%20Designer-orange)
 ![Arduino](https://img.shields.io/badge/Arduino-Uno-blue)
